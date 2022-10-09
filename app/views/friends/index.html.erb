@@ -1,0 +1,14 @@
+<h1>Friend List</h1>
+
+<div id="friends" style="display: flex">
+  <% @friends.each do |friend| %>
+  <div class="card mr-3 my-3" style="width: 18rem">
+    <%= render friend %>
+    <p class="card-body">
+      <%= link_to "Show this friend", friend, class:"btn btn-primary" %>
+    </p>
+  </div>
+  <% end %>
+</div>
+
+<%= link_to "New friend", new_friend_path %>
